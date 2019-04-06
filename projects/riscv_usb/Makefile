@@ -4,10 +4,16 @@ PROJ = riscv_usb
 PROJ_DEPS := usb misc
 PROJ_RTL_SRCS := $(addprefix rtl/, \
 	bridge.v \
+	iobuf.v \
 	picorv32.v \
 	soc_bram.v \
 	soc_spram.v \
 	sysmgr.v \
+	wb_arbiter.v \
+	wb_dma.v \
+	wb_e1data.v \
+	wb_epbuf.v \
+	wb_spram.v \
 )
 PROJ_SIM_SRCS := $(addprefix sim/, \
 	spiflash.v \
