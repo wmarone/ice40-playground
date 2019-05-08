@@ -1,0 +1,6 @@
+0000000000000000
+osmocom
+iCE40 USB Device (DFU mode)
+DFU
+iCE40 bitstream
+RISC-V firmware
