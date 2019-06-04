@@ -39,8 +39,9 @@
 
 module top (
 	// RGB panel PMOD
-	output wire [4:0] hub75_addr,
-	output wire [5:0] hub75_data,
+	output wire hub75_addr_inc,
+	output wire hub75_addr_rst,
+	output wire [2:0] hub75_data,
 	output wire hub75_clk,
 	output wire hub75_le,
 	output wire hub75_blank,
@@ -120,9 +121,14 @@ module top (
 		.N_COLS(N_COLS),
 		.N_CHANS(N_CHANS),
 		.N_PLANES(N_PLANES),
-		.BITDEPTH(BITDEPTH)
+		.BITDEPTH(BITDEPTH),
+		.PHY_DDR(1),
+		.PHY_AIR(1),
+		.SCAN_MODE("LINEAR")
 	) hub75_I (
-		.hub75_addr(hub75_addr),
+		.hub75_addr_inc(hub75_addr_inc),
+		.hub75_addr_rst(hub75_addr_rst),
+		.hub75_addr(),
 		.hub75_data(hub75_data),
 		.hub75_clk(hub75_clk),
 		.hub75_le(hub75_le),
@@ -139,9 +145,9 @@ module top (
 		.frame_rdy(frame_rdy),
 		.ctrl_run(ctrl_run),
 		.cfg_pre_latch_len(8'h80),
-		.cfg_latch_len(8'h80),
+		.cfg_latch_len(8'h01),
 		.cfg_post_latch_len(8'h80),
-		.cfg_bcm_bit_len(8'h06),
+		.cfg_bcm_bit_len(8'h02),
 		.clk(clk),
 		.rst(rst)
 	);
