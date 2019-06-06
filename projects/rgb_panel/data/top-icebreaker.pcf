@@ -15,6 +15,13 @@ set_io -nowarn hub75_data[0] 47 # A3 - Blue  0
 #set_io -nowarn hub75_data[1] 2  # A2 - Green 0
 #set_io -nowarn hub75_data[0] 4  # A1 - Blue  0
 
+#set_io -nowarn hub75_data[5] 48 # A9 - Red   1
+#set_io -nowarn hub75_data[4] 46 # A8 - Green 1
+#set_io -nowarn hub75_data[3] 3  # A7 - Blue  1
+#set_io -nowarn hub75_data[2] 2  # A3 - Red   0
+#set_io -nowarn hub75_data[1] 47 # A2 - Green 0
+#set_io -nowarn hub75_data[0] 4  # A1 - Blue  0
+
  # Row address
 set_io -nowarn hub75_addr[4] 28 # B10
 set_io -nowarn hub75_addr[3] 31 # B4
